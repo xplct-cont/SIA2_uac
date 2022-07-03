@@ -19,7 +19,11 @@
             <div class="card-title">
                 <h4>{{$movie->title}}</h4>
                 <p>
-                    {{$movie->genre}}
+                    Movie Genre: 
+                    {{$movie->genre}}  <br>
+
+                   Author: 
+                    {{$movie->user->name}}
                 </p>
             </div>
         </div>

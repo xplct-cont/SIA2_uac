@@ -19,4 +19,13 @@ class Movie extends Model
         return $this->belongsTo('App\Models\User');
 
     }
+
+
+    public function isEditable(){
+        $movie = request()->route('movie');
+
+      
+
+         return auth()->user()->role == 'editor' || auth()->user()->id == $movie->user_id;
+    }
 }

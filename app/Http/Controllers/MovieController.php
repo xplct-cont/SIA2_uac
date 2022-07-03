@@ -55,6 +55,13 @@ class MovieController extends Controller
     }
 
   public function recentMovies(){
+     
+    $recentMovie = Movie::orderBy('created_at' ,'desc')->limit(50)->get();
+
+    return view('movies.recent-movies', ['recentMovies' => $recentMovie]);
+
+
+
     return view('movies.recent-movies');
   }
 }

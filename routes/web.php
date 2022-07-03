@@ -46,8 +46,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/movies/create',[MovieController::class, 'create']);
     Route::post('/movies', [MovieController::class, 'store']);
     Route::get('/movies/{movie}', [MovieController::class, 'show']);
-    Route::get('/movies/edit/{movie}', [MovieController::class, 'edit'])->middleware('owner');
-    Route::put('/movies/{movie}',[MovieController::class, 'update']);
+    Route::get('/movies/edit/{movie}', [MovieController::class, 'edit'])->middleware('can-edit');
+    Route::put('/movies/{movie}',[MovieController::class, 'update'])->middleware('can-edit');
 
 
 

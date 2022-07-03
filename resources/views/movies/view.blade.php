@@ -4,10 +4,12 @@
 
 <h1>{{$movie->title}}</h1>
 <div>
-    {{$movie->user->name}}, {{$movie->user->email}}<br />
+
+    Author: 
+    {{$movie->user->name}}<br />
     {{$movie->created_at->format('F d, Y g:i A')}}
 </div>
-<hr>
-{!! $movie->content !!}
+<hr> Movie Genre:
+{!! $movie->genre !!}
 
 @endsection
