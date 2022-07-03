@@ -2,12 +2,11 @@
 
 @section('content')
 
-
 <div class="row mt-3">
     <div class="col-md-6">
         <h1>Create Movie</h1>
         <hr>
-        {!! Form::open(['url'=>'/movies','method'=>'post']) !!}
+        {!! Form::open(['url'=>'/movies','method'=>'movie']) !!}
 
         <div class="mb-3">
             {!! Form::label("title", "Title") !!}
@@ -16,7 +15,7 @@
 
         <div class="mb-3">
             {!! Form::label("genre", "Genre") !!}
-            {!! Form::text("genre)", null, ['class'=>'form-control']) !!}
+            {!! Form::text("genre", null, ['class'=>'form-control']) !!}
         </div>
 
         <div class="mb-3">
@@ -28,4 +27,5 @@
         {!! Form::close() !!}
     </div>
 </div>
+
 @endsection

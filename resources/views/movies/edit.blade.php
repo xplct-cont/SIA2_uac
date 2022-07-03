@@ -6,7 +6,7 @@
     <div class="col-md-6">
         <h1>Edit Movie</h1>
         <hr>
-        {!! Form::model($post, ['url'=>'/movies/' . $movie->id,'method'=>'put']) !!}
+        {!! Form::model($movie, ['url'=>'/movies/' . $movie->id,'method'=>'put']) !!}
 
         <div class="mb-3">
             {!! Form::label("title", "Title") !!}

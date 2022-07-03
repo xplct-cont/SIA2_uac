@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
+  
     public function myMovies() {
         $myMovies = Movie::where('user_id', auth()->user()->id)
             ->orderBy('created_at', 'desc')
@@ -45,7 +46,7 @@ class MovieController extends Controller
     public function update(Movie $movie, Request $request) {
         $request->validate([
             'title' => 'string|required',
-            'content' => 'string|required',
+            'genre' => 'string|required',
         ]);
 
         $movie->update($request->all());
@@ -53,8 +54,7 @@ class MovieController extends Controller
         return redirect('/movies/' . $movie->id);
     }
 
-
-    public function recentMovies(){
-        return view('movies.recent-movies');
-    }
+  public function recentMovies(){
+    return view('movies.recent-movies');
+  }
 }

@@ -23,8 +23,8 @@
                 </p>
             </div>
         </div>
-        <div class="card-footer">
-            <a href="{{url('/movies/edit/' . $movie->id)}}" class="btn btn-info btn-sm">
+        <div class="card-footer bg-info">
+            <a href="{{url('/movies/edit/' . $movie->id)}}" class="btn btn-secondary btn-sm">
                 Edit
             </a>
         </div>
